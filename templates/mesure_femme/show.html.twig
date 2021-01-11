@@ -1,0 +1,91 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}MesureFemme{% endblock %}
+
+{% block body %}
+    <table class="table table-striped">
+        <tbody>
+            <tr>
+                <th> <h1>Mesure Cliente n°{{ mesure_femme.id }}</h1></th>
+                <td></td>
+            </tr>
+            <tr>
+                <th>E</th>
+                <td>{{ mesure_femme.epaule }}</td>
+            </tr>
+            <tr>
+                <th>MC</th>
+                <td>{{ mesure_femme.massCourte }}</td>
+            </tr>
+            <tr>
+                <th>MTQ</th>
+                <td>{{ mesure_femme.massTroisQuart }}</td>
+            </tr>
+            <tr>
+                <th>ML</th>
+                <td>{{ mesure_femme.massLongue }}</td>
+            </tr>
+            <tr>
+                <th>TM</th>
+                <td>{{ mesure_femme.tourDeMasse }}</td>
+            </tr>
+            <tr>
+                <th>P</th>
+                <td>{{ mesure_femme.poitrine }}</td>
+            </tr>
+            <tr>
+                <th>TT</th>
+                <td>{{ mesure_femme.taille }}</td>
+            </tr>
+            <tr>
+                <th>C</th>
+                <td>{{ mesure_femme.ceinture }}</td>
+            </tr>
+            <tr>
+                <th>THA</th>
+                <td>{{ mesure_femme.anche }}</td>
+            </tr>
+            <tr>
+                <th>LBL</th>
+                <td>{{ mesure_femme.longueurBlouse }}</td>
+            </tr>
+            <tr>
+                <th>LB</th>
+                <td>{{ mesure_femme.longueurBoubou }}</td>
+            </tr>
+            <tr>
+                <th>LJ</th>
+                <td>{{ mesure_femme.longueurJupe }}</td>
+            </tr>
+            <tr>
+                <th>LP</th>
+                <td>{{ mesure_femme.longueurPagne }}</td>
+            </tr>
+            <tr>
+                <th>LRTQ</th>
+                <td>{{ mesure_femme.longueurRobrTroisQuart }}</td>
+            </tr>
+            <tr>
+                <th>LRL</th>
+                <td>{{ mesure_femme.longueurRobeLongue }}</td>
+            </tr>
+            <tr>
+                <th>JC</th>
+                <td>{{ mesure_femme.jupeCourte }}</td>
+            </tr>
+            <tr>
+                <th>JTQ</th>
+                <td>{{ mesure_femme.jupeTroisQuart }}</td>
+            </tr>
+            <tr>
+                <th>JL</th>
+                <td>{{ mesure_femme.jupeLongue }}</td>
+            </tr>
+        </tbody>
+        <tr>
+<th><a class="btn btn-primary" href="{{ path('mesure_femme_edit', {'id': mesure_femme.id}) }}">modifier</a></th>
+
+   <th> {{ include('mesure_femme/_delete_form.html.twig') }}</th>
+        </tr>
+    </table>
+{% endblock %}

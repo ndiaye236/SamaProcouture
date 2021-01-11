@@ -1,0 +1,46 @@
+{% extends 'base3.html.twig' %}
+{% block stylesheets %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" type="text/css" href="{{ asset("CSS/style.css")}}">
+        <link href="{{ asset("CSS/bootstrap.min.css")}}" rel="stylesheet">
+        <link href="{{ asset("CSS/font-awesome.min.css")}}" rel="stylesheet">
+        <link href="{{ asset("CSS/prettyPhoto.css")}}" rel="stylesheet">
+        <link href="{{ asset("CSS/price-range.css")}}" rel="stylesheet">
+        <link href="{{ asset("CSS/animate.css")}}" rel="stylesheet" type="text/css">
+	      <link href="{{ asset("CSS/main.css")}}" rel="stylesheet" type="text/css">
+	       <link href="{{ asset("CSS/responsive.css")}}"rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="{{ asset("CSS/style.css")}}">
+{% endblock %}
+{% block body %}
+<div class="row">
+  <div class="leftcolumn">
+
+    <div class="card">
+      <div class="fakeimg" style="height:500px; width:900px;"><img class="im" src="{{ asset("img/machin1.PNG") }}"></div>
+     </div>
+       <div id="contact" class="card">
+        </div>
+  </div>
+
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>Espace Patron</h2>
+      <div class="fakeimg1" style="height:100px;"><a class="text1" href="{{path('app_login')}}">Se connecter</a></div>
+      
+    </div>
+    <div class="card">
+      <h3>Espace Employés</h3>
+      <div class="fakeimg1"><a class="text1" href="{{ path('catalogue2')}}">Commandes & mesures</a></div>
+     
+    </div>
+    <div class="card">
+      <h3>Espace Client</h3>
+      <div class="fakeimg1"><a class="text1" href="{{path('sa_modele_index')}}">modéles</a></div>
+      <p>Visiter les modéles existants.</p>
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% block javascripts %}
+	<script src="{{ asset("JS/style.js") }}"></script>
+{% endblock %}

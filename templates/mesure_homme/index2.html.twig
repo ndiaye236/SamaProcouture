@@ -1,0 +1,56 @@
+{% extends 'base2.html.twig' %}
+
+{% block title %}MesureHomme{% endblock %}
+
+{% block body %}
+    <table class="table table-striped">
+        <thead>
+             <tr><th><h1 style="text-align:center">Mesures</h1></th></tr>
+            <tr>
+                <th>Id</th>
+                <th>E</th>
+                <th>MC</th>
+                <th>ML</th>
+                <th>MTQ</th>
+                <th>TM</th>
+                <th>Poigner</th>
+                <th>Cou</th>
+                <th>P</th>
+                <th>LB</th>
+                <th>DS</th>
+                <th>TQ</th>
+                <th>C</th>
+                <th>LP</th>
+                <th>Cu</th>
+                <th>THA</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+        {% for mesure_homme in mesure_hommes %}
+            <tr>
+                <td>{{ mesure_homme.id }}</td>
+                <td>{{ mesure_homme.epaul }}</td>
+                <td>{{ mesure_homme.massCourte }}</td>
+                <td>{{ mesure_homme.massLong }}</td>
+                <td>{{ mesure_homme.massTroisQuart }}</td>
+                <td>{{ mesure_homme.tourdeMass }}</td>
+                <td>{{ mesure_homme.poigner }}</td>
+                <td>{{ mesure_homme.coup }}</td>
+                <td>{{ mesure_homme.poitrine }}</td>
+                <td>{{ mesure_homme.longueurBoub }}</td>
+                <td>{{ mesure_homme.demiSaison }}</td>
+                <td>{{ mesure_homme.troisQuart }}</td>
+                <td>{{ mesure_homme.ceinture }}</td>
+                <td>{{ mesure_homme.longueurPantalon }}</td>
+                <td>{{ mesure_homme.cuisse }}</td>
+                <td>{{ mesure_homme.anche }}</td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="17">Aucun mesure trouver</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

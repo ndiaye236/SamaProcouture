@@ -1,0 +1,37 @@
+{% extends 'base2.html.twig' %}
+
+{% block title %}Commande{% endblock %}
+
+{% block body %}
+    <table class="table table-striped">
+        <thead>
+          <tr><th><h1 style="text-align:center">Sugnu Commandes<h1></th></tr>
+            <tr>
+                <th>commande n°</th>
+                <th>Modele</th>
+                <th>Quantité</th>
+                <th>Description</th>
+                <th>Date de livraison</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for catalogue in catalogues %}
+            <tr>
+                <td>{{ catalogue.id }}</td>
+                <td><img src="{{ asset('img/' ~ catalogue.modele) }}" ></td>
+                <td>{{ catalogue.quantity }}</td>
+                <td>{{ catalogue.description }}</td>   
+                <td>{{ catalogue.Lastdate|date('Y:m:d') }}</td> 
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">Pas de Commande</td>
+            </tr>
+        {% endfor %}
+
+        </tbody>
+        
+    </table>
+
+    
+{% endblock %}

@@ -1,0 +1,63 @@
+{% extends 'base2.html.twig' %}
+
+{% block title %}MesureFemme{% endblock %}
+
+{% block body %}
+    <table class="table table-striped">
+        <thead>
+        <tr><th><h1>Mesures Femmes</h1></th></tr>
+            <tr>
+                <th>Cliente n°</th>
+                 <th>E</th>
+                <th>MC</th>
+                <th>MTQ</th>
+                <th>ML</th>
+                <th>TM</th>
+                <th>Poitrine</th>
+                <th>TT</th>
+                <th>C</th>
+                <th>THA</th>
+                <th>LBL</th>
+                <th>LB</th>
+                <th>LJ</th>
+                <th>LPa</th>
+                <th>LRTQ</th>
+                <th>LRL</th>
+                <th>JC</th>
+                <th>JTQ</th>
+                <th>JL</th>
+            
+            </tr>
+        </thead>
+        <tbody>
+        {% for mesure_femme in mesure_femmes %}
+            <tr>
+                <td>{{ mesure_femme.id }}</td>
+                <td>{{ mesure_femme.epaule }}</td>
+                <td>{{ mesure_femme.massCourte }}</td>
+                <td>{{ mesure_femme.massTroisQuart }}</td>
+                <td>{{ mesure_femme.massLongue }}</td>
+                <td>{{ mesure_femme.tourDeMasse }}</td>
+                <td>{{ mesure_femme.poitrine }}</td>
+                <td>{{ mesure_femme.taille }}</td>
+                <td>{{ mesure_femme.ceinture }}</td>
+                <td>{{ mesure_femme.anche }}</td>
+                <td>{{ mesure_femme.longueurBlouse }}</td>
+                <td>{{ mesure_femme.longueurBoubou }}</td>
+                <td>{{ mesure_femme.longueurJupe }}</td>
+                <td>{{ mesure_femme.longueurPagne }}</td>
+                <td>{{ mesure_femme.longueurRobrTroisQuart }}</td>
+                <td>{{ mesure_femme.longueurRobeLongue }}</td>
+                <td>{{ mesure_femme.jupeCourte }}</td>
+                <td>{{ mesure_femme.jupeTroisQuart }}</td>
+                <td>{{ mesure_femme.jupeLongue }}</td>
+               
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="20">Aucun mesure touver</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

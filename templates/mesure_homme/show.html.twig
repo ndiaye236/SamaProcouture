@@ -1,0 +1,74 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}MesureHomme{% endblock %}
+
+{% block body %}
+    <table class="table table-striped">
+        <tbody>
+          <tr><th><h1>Mesures client n°{{ mesure_homme.id }}</h1></th><td></td></tr>
+            <tr>
+                <th>E</th>
+                <td>{{ mesure_homme.epaul }}</td>
+            </tr>
+            <tr>
+                <th>MC</th>
+                <td>{{ mesure_homme.massCourte }}</td>
+            </tr>
+            <tr>
+                <th>ML</th>
+                <td>{{ mesure_homme.massLong }}</td>
+            </tr>
+            <tr>
+                <th>MTQ</th>
+                <td>{{ mesure_homme.massTroisQuart }}</td>
+            </tr>
+            <tr>
+                <th>TM</th>
+                <td>{{ mesure_homme.tourdeMass }}</td>
+            </tr>
+            <tr>
+                <th>Pg</th>
+                <td>{{ mesure_homme.poigner }}</td>
+            </tr>
+            <tr>
+                <th>Cou</th>
+                <td>{{ mesure_homme.coup }}</td>
+            </tr>
+            <tr>
+                <th>P</th>
+                <td>{{ mesure_homme.poitrine }}</td>
+            </tr>
+            <tr>
+                <th>LB</th>
+                <td>{{ mesure_homme.longueurBoub }}</td>
+            </tr>
+            <tr>
+                <th>DS</th>
+                <td>{{ mesure_homme.demiSaison }}</td>
+            </tr>
+            <tr>
+                <th>TQ</th>
+                <td>{{ mesure_homme.troisQuart }}</td>
+            </tr>
+            <tr>
+                <th>C</th>
+                <td>{{ mesure_homme.ceinture }}</td>
+            </tr>
+            <tr>
+                <th>LP</th>
+                <td>{{ mesure_homme.longueurPantalon }}</td>
+            </tr>
+            <tr>
+                <th>Cu</th>
+                <td>{{ mesure_homme.cuisse }}</td>
+            </tr>
+            <tr>
+                <th>THA</th>
+                <td>{{ mesure_homme.anche }}</td>
+            </tr>
+        </tbody>
+        <tr>
+        <th> <a class="btn btn-primary" href="{{ path('mesure_homme_edit', {'id': mesure_homme.id}) }}">Modifier</a>  </th>
+        <th> {{ include('mesure_homme/_delete_form.html.twig') }}</th>
+    </table>
+{% endblock %}
